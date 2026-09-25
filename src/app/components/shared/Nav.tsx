@@ -16,7 +16,7 @@ const Nav = () => {
     )
   
     return (
-         <div className="navbar bg-base-100 shadow-sm px-[5%]">
+         <div className="navbar  shadow-sm px-[5%] bg-[#15171d]">
      <div className="navbar-start ">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ const Nav = () => {
        {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl font-bold">FITLOG</a>
+    <a className="btn btn-ghost text-xl font-bold text-white">FITLOG</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -36,8 +36,8 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end gap-3">
-    <a className="btn">Plan</a>
-    <a className="btn">Saved</a>
+    <a className="text-white">Plan</a>
+    <a className="text-white">Saved</a>
   </div>
 </div>
     );
