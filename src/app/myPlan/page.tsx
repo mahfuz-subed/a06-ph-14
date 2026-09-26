@@ -4,7 +4,7 @@ import MyPlanTab from '../components/myPlantab';
 import { LibraryContext } from '@/LibraryContext/LibraryProvider';
 const MyPlanPage = () => {
     const {todaysPlan,saved,activeTab} = useContext(LibraryContext);
-    const currentPlan = activeTab === "today"? todaysPlan:saved;
+    const currentPlan = activeTab === "today"? todaysPlan : saved;
     const totalMinutes = currentPlan.reduce((total,crr)=> total+crr.duration,0)
     const totalCalories = currentPlan.reduce((total,crr)=> total+crr.caloriesBurned,0)
     return (

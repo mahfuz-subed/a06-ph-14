@@ -26,7 +26,7 @@ const Nav = () => {
       </div>
       <ul
         tabIndex={-1}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-black rounded-box z-1 mt-3 w-52 p-2 shadow">
        {links}
       </ul>
     </div>
@@ -38,8 +38,8 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end gap-3">
-    <Link href="/myPlan" className="text-white">Plan <span className='bg-[#c2f800] font-bold ml-1 px-2 py-1 rounded-full text-[#404140]'>{todaysPlan.length}</span></Link>
-    <Link href="/myPlan" className="text-white">Saved  <span className='bg-[#c2f800] font-bold ml-1 px-2 py-1 rounded-full text-[#404140]'>{todaysPlan.length}</span></Link>
+    <Link href="/myPlan" className="text-white">Plan <span className='bg-[#c2f800] font-bold ml-1 px-3 py-1 rounded-full text-[#404140]'>{todaysPlan.length}</span></Link>
+    <Link href="/myPlan" className="text-white">Saved  <span className='bg-[#c2f800] font-bold ml-1 px-3 py-1 rounded-full text-[#404140]'>{saved.length}</span></Link>
   </div>
 </div>
     );
