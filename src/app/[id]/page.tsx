@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { MdOutlineCropLandscape} from "react-icons/md";
-import { BsSaveFill } from "react-icons/bs";
+import PlanButton from "../components/buttons/planButton";
+import SaveButton from "../components/buttons/saveButton";
 
 interface ILibraryDetialsProp{
   params: Promise<{id:string}>
@@ -80,8 +80,8 @@ const LibraryDetailsPage = async ({params}:ILibraryDetialsProp) => {
   <p>4. {idData.instructions[3]}</p>
 </div>
     <div className="card-actions justify-start gap-2">
-      <button className="btn bg-[#c2f800] flex items-center"><MdOutlineCropLandscape /> Add to today's plan</button>
-      <button className="btn bg-[#c2f800] flex items-center"><BsSaveFill /> Save for later</button>
+      <PlanButton idData={idData}/>
+      <SaveButton idData={idData}/>
     </div>
   </div>
 </div>
