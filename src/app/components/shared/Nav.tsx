@@ -8,9 +8,9 @@ const Nav = () => {
     const pathName =usePathname()
 
     const links = ( <>
-          <li><Link className= {`no-underline  ${pathName === '/' ? 'bg-[#1a2312] text-[#c2f800]' : ''}`}
+          <li><Link className= {`no-underline  ${pathName === '/' ? 'bg-[#1a2312] text-[#c2f800]' : 'text-white'}`}
          href="/">Workouts</Link></li>
-        <li><Link className= {`no-underline  ${pathName === '/' ? 'bg-[#1a2312] text-[#c2f800]' : ''}`} 
+        <li><Link className= {`no-underline  ${pathName === '/' ? 'bg-[#1a2312] text-[#c2f800]' : 'text-white'}`} 
          href="/myPlan">My Plan</Link></li>
    </>
     )

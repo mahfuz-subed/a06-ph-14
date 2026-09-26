@@ -1,5 +1,5 @@
 import React from 'react';
-import LibraryCard from './libraryCard';
+import LibraryCard from '../components/libraryCard';
 import { ILibrary } from '../types/libraryType';
  const getLibrary = async () => {
     const res = await fetch ('https://api.abcz.workers.dev/api/fitlog')

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import heroImg from "@/assets/banner.png"
-import LibrarySection from "./components/library";
+import LibrarySection from "./librarySection/library";
 export default function Home() {
   return (
 <div>
@@ -31,4 +31,3 @@ into today's plan, and watch the weeks' work add up.</p>
 </div>
   );
 }
-//className="w-1/2"

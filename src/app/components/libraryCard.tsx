@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import { ILibrary } from '../types/libraryType';
 import { FaFire,FaRegStar,FaRegCircle  } from "react-icons/fa";
-
+import Link from 'next/link';
 
 
 const LibraryCard = ({library}:{library:ILibrary}) => {
     return (
+     <Link href={`/${library.id}`}>
        <div className="card bg-[#222630] shadow-sm w-85 h-95">
   <figure>
     <Image
@@ -29,6 +30,7 @@ const LibraryCard = ({library}:{library:ILibrary}) => {
     </div>
   </div>
 </div>
+     </Link>
     );
 };
 
