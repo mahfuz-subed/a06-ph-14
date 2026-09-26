@@ -10,7 +10,7 @@ const Nav = () => {
     const links = ( <>
           <li><Link className= {`no-underline  ${pathName === '/' ? 'bg-[#1a2312] text-[#c2f800]' : 'text-white'}`}
          href="/">Workouts</Link></li>
-        <li><Link className= {`no-underline  ${pathName === '/' ? 'bg-[#1a2312] text-[#c2f800]' : 'text-white'}`} 
+        <li><Link className= {`no-underline  ${pathName === '/myPlan' ? 'bg-[#1a2312] text-[#c2f800]' : 'text-white'}`} 
          href="/myPlan">My Plan</Link></li>
    </>
     )
@@ -30,14 +30,14 @@ const Nav = () => {
     </div>
     <a className="btn btn-ghost text-xl font-bold text-white">FITLOG</a>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div className="navbar-center hidden lg:flex gap-2">
     <ul className="menu menu-horizontal px-1">
      {links}
     </ul>
   </div>
   <div className="navbar-end gap-3">
-    <a className="text-white">Plan</a>
-    <a className="text-white">Saved</a>
+    <Link href="/myPlan" className="text-white">Plan</Link>
+    <Link href="/myPlan" className="text-white">Saved</Link>
   </div>
 </div>
     );

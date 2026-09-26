@@ -2,7 +2,11 @@ import Image from "next/image";
 import { MdOutlineCropLandscape} from "react-icons/md";
 import { BsSaveFill } from "react-icons/bs";
 
-const LibraryDetailsPage = async ({params}) => {
+interface ILibraryDetialsProp{
+  params: Promise<{id:string}>
+}
+
+const LibraryDetailsPage = async ({params}:ILibraryDetialsProp) => {
     const {id} = await params
 
     const res = await fetch (`https://api.abcz.workers.dev/api/fitlog/${id}`)
