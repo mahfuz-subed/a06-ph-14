@@ -1,10 +1,12 @@
 'use client'
+import { LibraryContext } from '@/LibraryContext/LibraryProvider';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+import { useContext } from 'react';
 
 const Nav = () => {
 
+    const {todaysPlan, saved} = useContext(LibraryContext)
     const pathName =usePathname()
 
     const links = ( <>
@@ -36,8 +38,8 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end gap-3">
-    <Link href="/myPlan" className="text-white">Plan</Link>
-    <Link href="/myPlan" className="text-white">Saved</Link>
+    <Link href="/myPlan" className="text-white">Plan <span className='bg-[#c2f800] font-bold ml-1 px-2 py-1 rounded-full text-[#404140]'>{todaysPlan.length}</span></Link>
+    <Link href="/myPlan" className="text-white">Saved  <span className='bg-[#c2f800] font-bold ml-1 px-2 py-1 rounded-full text-[#404140]'>{todaysPlan.length}</span></Link>
   </div>
 </div>
     );

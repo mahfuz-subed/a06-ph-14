@@ -6,9 +6,13 @@ import { ILibrary } from "../types/libraryType";
 import Image from "next/image";
 import { FaRegCircle,FaFire,FaRegStar } from "react-icons/fa";
 import Link from "next/link";
+import { IoIosCheckmark } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const MyPlanTab = () => {
-
+    const handleDoneButton=()=>{
+        toast.success("Congrats on finishing the task.")
+    }
     const {todaysPlan, saved} = useContext(LibraryContext)
 
     return (
@@ -29,7 +33,11 @@ const MyPlanTab = () => {
                 </div>
         </div>
        </div>
+          <div className="grid gap:3 grid-cols-2">
         <Link href=""><button className="btn btn-outline rounded-3xl border-[#9ca3af] text-white">View Details</button></Link>
+         <button  onClick={handleDoneButton} disabled={true}
+         className="btn rounded:5xl bg-[#c2f800]"><IoIosCheckmark className="text-xl"/> Mark as Done</button>
+         </div>
         </div>}): "No items has yet been added in Plan tab."}</div>
 
   <input type="radio" name="my_tabs_2" className="tab text-white checked:text-[#c2f800]" aria-label="Saved"  />
@@ -48,7 +56,11 @@ const MyPlanTab = () => {
                 </div>
         </div>
        </div>
-        <Link href={`/${library.id}`}><button className="btn btn-outline rounded-3xl border-[#9ca3af] text-white">View Details</button></Link>
+        <div className="grid gap:3 grid-cols-2">
+            <Link href={`/${library.id}`}><button className="btn btn-outline rounded-3xl border-[#9ca3af] text-white">View Details</button></Link>
+            <button onClick={handleDoneButton} disabled={true}
+            className="btn rounded:5xl bg-[#c2f800]"><IoIosCheckmark className="text-xl" /> Mark as Done</button>
+        </div>
         </div>}): "No items has yethas been added been added in Saved tab."}
  
   </div>
