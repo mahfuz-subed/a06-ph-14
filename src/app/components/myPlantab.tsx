@@ -69,13 +69,12 @@ const MyPlanTab = () => {
 <div className="tabs tabs-border text-whites"> 
   <input type="radio" name="my_tabs_2" className="tab text-white checked:text-[#c2f800]" aria-label="Today's Plan" onChange={()=>setActiveTab("today")}defaultChecked/>
   <div className="tab-content border-base-300 bg-[#222630] p-10 space-y-4"> {todaysPlan.length>0? sortedTodaysPlan.map((library:ILibrary)=>{
-    console.log("Library:", library.name, "ID:", library.id);
-    return <div key={library.id} className="flex justify-between items-center border-1 border-[#9ca3af] rounded-2xl px-[5%] py-2">
+    return <div key={library.id} className="flex justify-between items-center border-1 border-[#9ca3af] rounded-2xl py-2 px-[1%] md:px-[5%]">
        <div className=" w-full flex flex-row justify-between items-center">
          <div>
          <Image src={library.image} alt={library.name} width={100} height={100} className="rounded-2xl"></Image>
         </div>
-        
+         
              <div className="flex flex-col justify-between items-center lg:items-baseline">
             <h2 className="text-[15px] font-bold text-white lg:text-xl">{library.name}</h2>
             <p className="text-[13px] text-white mb-2 lg:text-md">{library.equipment}</p>
@@ -93,7 +92,9 @@ const MyPlanTab = () => {
          <span onClick={()=>handleRemovePlan(library)}><RiDeleteBin2Line className=" text-[#c2f800] ml-4 cursor-pointer"/>
         </span>
          </div>
-       </div>
+        
+         </div>
+     
       
         </div>}): (
       <div className="text-center text-white space-y-3 py-5">
@@ -107,7 +108,7 @@ const MyPlanTab = () => {
   <input type="radio" name="my_tabs_2" className="tab text-white checked:text-[#c2f800]" aria-label="Saved" onChange={()=>setActiveTab("save")}  />
   <div className="tab-content border-base-300 bg-[#222630] p-10 space-y-4">
     {saved.length>0? sortedSaved.map((library:ILibrary)=>{
-    return <div key={library.id} className="flex justify-between items-center border-1 border-[#9ca3af] rounded-2xl px-[5%] py-2">
+    return <div key={library.id} className="flex justify-between items-center border-1 border-[#9ca3af] rounded-2xl py-2 px-[1%] md:px-[5%]">
        <div className="w-full flex justify-between items-center">
          <div className=""><Image src={library.image} alt={library.name} width={100} height={100} className="rounded-2xl"></Image></div>
     
@@ -145,3 +146,5 @@ const MyPlanTab = () => {
 };
 
 export default MyPlanTab;
+
+//  <div className="flex flex-col md:flex-row">

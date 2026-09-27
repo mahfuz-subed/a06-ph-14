@@ -1,6 +1,7 @@
 import Image from "next/image";
 import heroImg from "@/assets/banner.png"
 import LibrarySection from "./librarySection/library";
+import { Suspense } from "react";
 export default function Home() {
   return (
 <div>
@@ -21,11 +22,15 @@ into today's plan, and watch the weeks' work add up.</p>
     </div>
    </section>
 
-    <section id="workouts">
-      <div>
+  <section id="workouts">
+   <Suspense fallback={<div className='flex justify-around item-center'>
+            <h2 className='text-xxl font-bold text-white'>Hold tight. The data is being loaded. <span className="loading text-white loading-lg"></span></h2>
+        </div>}>
         <LibrarySection/>
-      </div>
-    </section>
+   </Suspense>
+</section>
+  
+ 
 
 </div>
   );

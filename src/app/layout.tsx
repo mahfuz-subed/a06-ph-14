@@ -31,7 +31,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-[#15171d]">
         <LibraryProvider>
            <Nav/>
-        {children}
+        <div className="flex-1">
+          {children}
+        </div>
         <Footer/>
           <ToastContainer />
         </LibraryProvider>
