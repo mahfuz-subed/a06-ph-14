@@ -38,8 +38,8 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end gap-3">
-    <Link href="/myPlan" className="text-white">Plan <span className='bg-[#c2f800] font-bold ml-1 px-3 py-1 rounded-full text-[#404140]'>{todaysPlan.length}</span></Link>
-    <Link href="/myPlan" className="text-white">Saved  <span className='bg-[#c2f800] font-bold ml-1 px-3 py-1 rounded-full text-[#404140]'>{saved.length}</span></Link>
+    <Link href="/myPlan" className="text-white">Plan <span className='bg-[#c2f800] border-3 border-[#c2f800] font-bold ml-1 px-3 py-1 rounded-full text-[#404140]'>{todaysPlan.length}</span></Link>
+    <Link href="/myPlan" className="text-white">Saved  <span className='bg-none border-3 border-[#c2f800] font-bold ml-1 px-3 py-1 rounded-full'>{saved.length}</span></Link>
   </div>
 </div>
     );

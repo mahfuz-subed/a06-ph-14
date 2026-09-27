@@ -1,4 +1,3 @@
-import React from 'react';
 import LibraryCard from '../components/libraryCard';
 import { ILibrary } from '../types/libraryType';
  const getLibrary = async () => {

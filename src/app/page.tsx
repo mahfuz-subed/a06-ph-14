@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import heroImg from "@/assets/banner.png"
 import LibrarySection from "./librarySection/library";
@@ -13,7 +12,7 @@ export default function Home() {
 EVERY SET.</h2>
         <p className="text-s text-[#9ca3af] md:text-lg">FitLog is a dark, no-nonsense gym companion: pick a lift, lock it
 into today's plan, and watch the weeks' work add up.</p>
-        <Link href="#workouts" className="btn bg-[#c2f800] text-black mt-2 w-[50%] border-none">BROWSE WORKOUTS</Link>
+        <a href="#workouts" className="btn bg-[#c2f800] text-black mt-2 w-[50%] border-none">BROWSE WORKOUTS</a>
       </div>
       <div >
         <Image className="lg:ml-30"

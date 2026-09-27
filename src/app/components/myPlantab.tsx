@@ -38,7 +38,7 @@ const MyPlanTab = () => {
        
     }
 
-     const [sortBy, setSortBy] = useState<"default"|"duration"|"calories"|"rating">("default")
+     const [sortBy, setSortBy] = useState<"duration"|"calories"|"rating">("duration")
 
     const sortCards = (library:ILibrary[])=>{
       const sortedCards  = [...library]
@@ -58,9 +58,9 @@ const MyPlanTab = () => {
         <div>
             <div className="text-end mt-8">
         <select value={sortBy} 
-        onChange={(e)=> setSortBy (e.target.value as "default" | "duration" | "calories" | "rating")}
+        onChange={(e)=> setSortBy (e.target.value as "duration" | "calories" | "rating")}
         className="select bg-[#222630] rounded-2xl w-[40%]">
-  <option value={"default"} disabled={true}>Sort by</option>
+  <option disabled={true}>Sort by</option>
   <option value={"duration"}>Duration</option>
   <option value={"calories"}>Calories</option>
   <option value={"rating"}>Rating</option>
